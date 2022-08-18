@@ -1,15 +1,16 @@
-% Code needed to calculate coefficients, functions, and vectors 
-% curves from expanded and non-expanded methods.
+% Below is the code needed to calculate the coefficients, functions, and vectors 
+%for the curves from expanded and non-expanded methods. 
 clear
 
 % GENERAL PARAMETERS/INFORMATION
+
 % arc length domain
 s0=1; % initial arclength (do not change)
-sf=2.0; % final arclength value (can be changed)
+sf=2.0; % final arclength value (CHANGE)
 s=s0:0.0001:sf;
 
 % value of curvature
-kap=2;
+kap=2; (CHANGE)
 
 % t interval
 t=kap*log(s);
