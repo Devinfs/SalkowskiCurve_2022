@@ -1,4 +1,4 @@
-% Code needed to plot calculate coefficients of functions to plot 
+% Code needed to calculate coefficients, functions, and vectors 
 % curves from expanded and non-expanded methods.
 clear
 
