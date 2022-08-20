@@ -6,7 +6,8 @@ clear
 % arc length domain
 s0=1; % initial arclength (do not change)
 sf=2.0; % final arclength value (CHANGE)
-s=s0:0.0001:sf;
+ds=0.0001; % step size (CHANGE)
+s=s0:ds:sf;
 
 % value of curvature
 kap=2; %(CHANGE)
