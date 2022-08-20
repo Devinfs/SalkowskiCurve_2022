@@ -1,5 +1,7 @@
-% Code needed to plot calculate coefficients of functions to plot 
-% curves from expanded and non-expanded methods.
+% Code needed to caluclate and plot quantities
+% from expanded and non-expanded methods.
+% Quantities that should be changed will have (CHANGE) next to them.
+
 clear
 
 % GENERAL PARAMETERS/INFORMATION
