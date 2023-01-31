@@ -1,4 +1,4 @@
-function [curve, tang, norm, bino]=curve_vdefornorm_expanded_function(s, kap)
+function [curve, tang, norm, bino]=curve_vdefornorm_expanded_orthogonalityerror_function(s, kap)
 
 % initial s
 s0=1;
@@ -14,9 +14,9 @@ F_N1= B(2,1) + B(2,2)*t + B(2,3)*t.^2 + B(2,4)*t.^3 + B(2,5)*t.^4 + B(2,6)*t.^5;
 F_N2= B(3,1) + B(3,2)*t + B(3,3)*t.^2 + B(3,4)*t.^3 + B(3,5)*t.^4 + B(3,6)*t.^5;
 
 % PRINCIPAL NORMAL VECTOR (SAME FOR BOTH METHODS)
-norm(1,:)=-F_N1 - ((1/(2*kap))*F_N2);
-norm(2,:)=F_N0 - F_N2;
-norm(3,:)=F_N1;
+norm(1,:)=F_N0;
+norm(2,:)=F_N1;
+norm(3,:)=F_N2;
 
 % G_mp matrix (array of coeffecients of F_Tm) (EQ. 5.4)
 G_mp= [[1, 1/(2*kap), 1/(factorial(3)*kap^2), (1/(factorial(4)))*((1/kap^3)-(1/kap)), (1/factorial(5))*((1/kap^4)-(9/kap^2)),0,0,0,0,0]; [0, 1/2, 1/(3*kap), ((1/(8*kap^2))-(1/12)),((1/(30*kap^3))-(13/(120*kap^2))),0,0,0,0,0];[0,0,1/3,1/(3*kap),((-1/30)+(11/(60*kap^2))), ((1/(45*kap^3))-(19/(360*kap)))],0,0,0,0];
@@ -27,9 +27,9 @@ F_T1= G_mp(2,1)*t + G_mp(2,2)*t.^2 + + G_mp(2,3)*t.^3 + G_mp(2,4)*t.^4 + G_mp(2,
 F_T2= G_mp(3,1)*t + G_mp(3,2)*t.^2 + + G_mp(3,3)*t.^3 + G_mp(3,4)*t.^4 + G_mp(3,5)*t.^5 + G_mp(3,6)*t.^6;
 
 % TANGENT VECTOR (EXPANDED METHOD)
-tang(1,:)=1-F_T1 - (1/(2*kap))*F_T2;
-tang(2,:)=F_T0 - F_T2;
-tang(3,:)=F_T1;
+tang(1,:)=F_T0;
+tang(2,:)=F_T1;
+tang(3,:)=F_T2;
 
 % BINORMAL VECTOR (NON-EXPANDED METHOD)
 bino(1,:)=tang(2,:).*norm(3,:)-tang(3,:).*norm(2,:);

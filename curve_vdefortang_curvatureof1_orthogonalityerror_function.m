@@ -11,9 +11,9 @@ F_T1= T_solcoeff(2,1) + T_solcoeff(2,2)*(s-s0)+ (1/factorial(2))*T_solcoeff(2,3)
 F_T2= T_solcoeff(3,1) + T_solcoeff(3,2)*(s-s0)+ (1/factorial(2))*T_solcoeff(3,3)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(3,4)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(3,5)*(s-s0).^4 + (1/factorial(5))*T_solcoeff(3,6)*(s-s0).^5;
 
 % Function coefficients of normal vector
-F_N0= (T_solcoeff(1,2)+ T_solcoeff(1,3)*(s-s0) + (1/factorial(2))*T_solcoeff(1,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(1,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(1,6)*(s-s0).^4)/kap;
-F_N1= (T_solcoeff(2,2)+ T_solcoeff(2,3)*(s-s0) + (1/factorial(2))*T_solcoeff(2,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(2,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(2,6)*(s-s0).^4)/kap;
-F_N2= (T_solcoeff(3,2)+ T_solcoeff(3,3)*(s-s0) + (1/factorial(2))*T_solcoeff(3,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(3,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(3,6)*(s-s0).^4)/kap;
+F_N0= T_solcoeff(1,2)+ T_solcoeff(1,3)*(s-s0) + (1/factorial(2))*T_solcoeff(1,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(1,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(1,6)*(s-s0).^4;
+F_N1= T_solcoeff(2,2)+ T_solcoeff(2,3)*(s-s0) + (1/factorial(2))*T_solcoeff(2,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(2,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(2,6)*(s-s0).^4;
+F_N2= T_solcoeff(3,2)+ T_solcoeff(3,3)*(s-s0) + (1/factorial(2))*T_solcoeff(3,4)*(s-s0).^2 + (1/factorial(3))*T_solcoeff(3,5)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(3,6)*(s-s0).^4;
 
 % Function coefficients of curve vector
 F_curve0= T_solcoeff(1,1)*(s-s0) + (1/factorial(2))*T_solcoeff(1,2)*(s-s0).^2+ (1/factorial(3))*T_solcoeff(1,3)*(s-s0).^3 + (1/factorial(4))*T_solcoeff(1,4)*(s-s0).^4 + (1/factorial(5))*T_solcoeff(1,5)*(s-s0).^5 + (1/factorial(6))*T_solcoeff(1,6)*(s-s0).^6;
